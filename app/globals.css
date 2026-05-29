@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #222222;
+  --color-offblue: #ffffff;
+  --color-accent: #89E900;
+  --font-sans: 'Grotesk', system-ui, sans-serif;
+  --font-mono: 'CommitMono', 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'Grotesk';
+  src: url('/fonts/grotesk-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Grotesk';
+  src: url('/fonts/grotesk-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Grotesk';
+  src: url('/fonts/grotesk-light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CommitMono';
+  src: url('/fonts/commit-mono.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #222222;
+  color: #ffffff;
+  font-family: 'Grotesk', system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #89E900; color: #222222; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #222222; }
+::-webkit-scrollbar-thumb { background: #89E900; }
+
+@media (max-width: 768px) {
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+}
